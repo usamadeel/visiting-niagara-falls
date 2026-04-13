@@ -267,8 +267,8 @@
   const hasFooterPlaceholder = !!document.getElementById('shared-footer');
 
   if (hasNavPlaceholder || hasFooterPlaceholder) {
-    const navUrl    = rootPath('partials/navbar.html');
-    const footerUrl = rootPath('partials/footer.html');
+    const navUrl    = rootPath('navbar.html');
+    const footerUrl = rootPath('footer.html');
     let pending = 0;
     if (hasNavPlaceholder)    pending++;
     if (hasFooterPlaceholder) pending++;
