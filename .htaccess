@@ -70,17 +70,8 @@ ServerSignature Off
     # 2e. SEO-FRIENDLY URL ROUTING (future pages / CMS scalability)
     # ──────────────────────────────────────────────────────────────────────────
 
-    # Tours directory
-    RewriteRule ^tours/?$                        tours/index.html  [L]
-    RewriteRule ^tours/([a-z0-9-]+)/?$          tours/$1.html     [L]
-
-    # Attractions directory
-    RewriteRule ^attractions/?$                  attractions/index.html [L]
-    RewriteRule ^attractions/([a-z0-9-]+)/?$    attractions/$1.html    [L]
-
-    # Blog directory
-    RewriteRule ^blog/?$                         blog/index.html   [L]
-    RewriteRule ^blog/([a-z0-9-]+)/?$           blog/$1.html      [L]
+    # Redirect trailing-slash variants to clean slugs
+    RewriteRule ^(tours|blog|attractions)/?$     /$1 [R=301,L]
 
     # Destination pages
     RewriteRule ^niagara-falls-usa/?$            destinations/usa.html    [L]
