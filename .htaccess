@@ -23,11 +23,6 @@ ServerSignature Off
     RewriteEngine On
     RewriteBase /
 
-    # ── Hostinger specific: ensure HTTPS_HOST is set properly ──────────────────
-    RewriteCond %{HTTP_HOST} ^visitingniagarafalls\.com$ [NC]
-    RewriteRule ^ - [L]
-
-
     # ──────────────────────────────────────────────────────────────────────────
     # 2a. FORCE HTTPS (SSL)
     # Hostinger auto-provisions free SSL via Let's Encrypt
@@ -69,9 +64,6 @@ ServerSignature Off
     # ──────────────────────────────────────────────────────────────────────────
     # 2e. SEO-FRIENDLY URL ROUTING (future pages / CMS scalability)
     # ──────────────────────────────────────────────────────────────────────────
-
-    # Redirect trailing-slash variants to clean slugs
-    RewriteRule ^(tours|blog|attractions)/?$     /$1 [R=301,L]
 
     # Destination pages
     RewriteRule ^niagara-falls-usa/?$            destinations/usa.html    [L]
