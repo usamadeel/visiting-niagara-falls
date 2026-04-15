@@ -17,14 +17,17 @@
     const el = document.getElementById(elementId);
     if (!el) return;
     fetch(url)
-      .then(r => r.text())
+      .then(r => {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.text();
+      })
       .then(html => {
         el.outerHTML = html;
         if (callback) callback();
       })
       .catch(() => {
-        // Fallback: partials not found (e.g. direct file:// open)
-        // Silently skip — page still works, just without injected partial
+        // Partial not found — still run boot() so page content is always visible
+        if (callback) callback();
       });
   }
 
@@ -267,8 +270,8 @@
   const hasFooterPlaceholder = !!document.getElementById('shared-footer');
 
   if (hasNavPlaceholder || hasFooterPlaceholder) {
-    const navUrl    = rootPath('partials/navbar.html');
-    const footerUrl = rootPath('partials/footer.html');
+    const navUrl    = rootPath('navbar.html');
+    const footerUrl = rootPath('footer.html');
     let pending = 0;
     if (hasNavPlaceholder)    pending++;
     if (hasFooterPlaceholder) pending++;

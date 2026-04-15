@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   gap: 8px;
   font-family: var(--font-heading);
-  font-size: .75rem;
+  font-size: clamp(.65rem, 1.2vw, .75rem);
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .section-sub {
-  font-size: 1.1rem;
+  font-size: clamp(.9rem, 1.8vw, 1.1rem);
   color: var(--clr-gray-600);
   max-width: 600px;
 }
@@ -965,23 +965,23 @@ h1, h2, h3, h4, h5 {
 .attraction-card {
   background: var(--clr-white);
   border-radius: var(--radius-lg);
-  overflow: visible;
+  overflow: hidden;
   box-shadow: var(--shadow-sm);
   border: 1.5px solid var(--clr-gray-200);
   transition: var(--transition);
   cursor: pointer;
-  display: block;
-  /* clip only the internal layout, not the floating icon */
-  isolation: isolate;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px;
 }
 .attraction-card-body {
-  /* ensure body sits below the floating icon with enough clearance */
-  padding: 36px 20px 20px;
-  background: var(--clr-white);
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  flex: 1;
+  min-width: 0;
 }
 .attraction-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   border-color: var(--clr-blue-light);
 }
@@ -1018,17 +1018,14 @@ h1, h2, h3, h4, h5 {
 .attraction-card:hover .attraction-card-img .img-clip img { transform: scale(1.08); }
 
 .attraction-card-icon {
-  position: absolute;
-  bottom: -20px;
-  left: 20px;
-  width: 48px; height: 48px;
-  background: var(--clr-blue);
+  flex-shrink: 0;
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--clr-blue), var(--clr-blue-light));
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
-  border: 3px solid #fff;
+  font-size: 1.5rem;
   box-shadow: var(--shadow-sm);
 }
 
@@ -1045,14 +1042,17 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 14px;
   line-height: 1.6;
 }
-.attraction-card-info {
+.attraction-card-info,
+.attraction-card-meta {
   display: flex;
-  gap: 14px;
+  gap: 10px;
   font-size: .78rem;
   color: var(--clr-gray-600);
   flex-wrap: wrap;
+  margin-bottom: 14px;
 }
-.attraction-card-info span { display: flex; align-items: center; gap: 4px; }
+.attraction-card-info span,
+.attraction-card-meta span { display: flex; align-items: center; gap: 4px; }
 
 /* ======================================================================
    ABOUT US
@@ -2026,6 +2026,8 @@ h1, h2, h3, h4, h5 {
 /* ======================================================================
    RESPONSIVE
 ====================================================================== */
+
+/* ── 1200px — wide laptop / small desktop ── */
 @media (max-width: 1200px) {
   .tours-grid { grid-template-columns: repeat(2, 1fr); }
   .attractions-grid { grid-template-columns: repeat(2, 1fr); }
@@ -2035,65 +2037,136 @@ h1, h2, h3, h4, h5 {
   .why-us-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ── 1024px — tablet landscape / small laptop ── */
 @media (max-width: 1024px) {
   :root { --section-py: 72px; }
+  .container { padding: 0 32px; }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
   .about-img-accent { display: none; }
   .about-badge-float { left: 20px; top: 20px; }
   .faq-layout { grid-template-columns: 1fr; gap: 48px; }
   .newsletter-inner { grid-template-columns: 1fr; gap: 40px; }
   .blog-grid { grid-template-columns: 1fr; }
-  .blog-sidebar { grid-template-columns: repeat(2, 1fr); display: grid; }
+  /* Fix: sidebar was incorrectly set to 2-col grid at this breakpoint */
+  .blog-sidebar { grid-template-columns: 1fr; display: flex; flex-direction: column; }
   .destinations-grid { gap: 20px; }
+  .section-title { font-size: clamp(1.5rem, 3vw, 2.5rem); }
 }
 
+/* ── 768px — tablet portrait / large phone landscape ── */
 @media (max-width: 768px) {
   :root { --section-py: 56px; }
+
+  .container { padding: 0 20px; }
 
   .nav-links, .nav-actions .btn { display: none; }
   .nav-hamburger { display: flex; }
   .nav-mobile-menu { display: flex; }
-
   .nav-top-bar { display: none; }
+  .nav-logo-icon { width: 40px; height: 40px; font-size: 1.1rem; }
+  .nav-logo-text strong { font-size: .9rem; }
+  .nav-logo-text span { font-size: .75rem; }
 
-  .search-fields {
-    grid-template-columns: 1fr;
-  }
+  .search-fields { grid-template-columns: 1fr; }
 
   .destinations-grid { grid-template-columns: 1fr; }
   .dest-card { min-height: 360px; }
 
   .tours-grid { grid-template-columns: 1fr; }
   .attractions-grid { grid-template-columns: 1fr; }
+  .attraction-card { flex-direction: row; align-items: flex-start; gap: 16px; }
+  .attraction-card-icon { flex-shrink: 0; width: 48px; height: 48px; }
   .guides-grid { grid-template-columns: repeat(2, 1fr); }
   .why-us-grid { grid-template-columns: 1fr 1fr; }
   .reviews-grid { grid-template-columns: 1fr; }
 
   .tours-header { flex-direction: column; align-items: flex-start; }
   .blog-header { flex-direction: column; align-items: flex-start; }
-
-  .blog-sidebar { grid-template-columns: 1fr; display: flex; }
+  .blog-sidebar { grid-template-columns: 1fr; display: flex; flex-direction: column; }
 
   .footer-main { grid-template-columns: 1fr 1fr; gap: 32px; }
   .footer-main .footer-brand { grid-column: 1 / -1; }
+  .footer-col ul { gap: 8px; }
 
   .reviews-summary { flex-direction: column; gap: 28px; }
   .hero-stats { gap: 20px; }
   .hero-stat-divider { display: none; }
 
-  .footer-bottom { flex-direction: column; text-align: center; }
-  .footer-bottom-right { justify-content: center; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 12px; }
+  .footer-bottom-right { justify-content: center; flex-wrap: wrap; }
+
+  .section-title { font-size: clamp(1.4rem, 3.5vw, 2rem); }
+  .section-sub { font-size: clamp(.9rem, 2vw, 1rem); }
+  .section-eyebrow { font-size: .7rem; }
 }
 
+/* ── 600px — large phone portrait ── */
+@media (max-width: 600px) {
+  .attraction-card { flex-direction: column; }
+  .attraction-card-icon { width: 52px; height: 52px; }
+  .attraction-card-meta { flex-wrap: wrap; gap: 6px; }
+
+  .tours-filters { gap: 6px; }
+  .tour-filter-btn { font-size: .78rem; padding: 8px 14px; }
+
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .footer-certifications { gap: 6px; }
+  .footer-cert { font-size: .68rem; padding: 3px 8px; }
+
+  .blog-filter-btn { font-size: .78rem; padding: 7px 14px; }
+  .blog-filter-btn + .blog-filter-btn { margin-left: 0; }
+}
+
+/* ── 480px — standard phone portrait ── */
 @media (max-width: 480px) {
+  .container { padding: 0 16px; }
+
   .why-us-grid { grid-template-columns: 1fr; }
   .guides-grid { grid-template-columns: 1fr; }
-  .footer-main { grid-template-columns: 1fr; }
-  .trust-bar-inner { gap: 16px; }
+  .footer-main { grid-template-columns: 1fr; gap: 28px; }
+  .footer-col h4 { font-size: .72rem; margin-bottom: 12px; }
+  .footer-col ul li a { font-size: .82rem; }
+  .footer-cert { font-size: .65rem; }
+  .footer-social-btn { width: 36px; height: 36px; font-size: .85rem; }
+  .footer-bottom-left { font-size: .78rem; }
+  .footer-bottom-right { font-size: .75rem; }
+
+  .trust-bar-inner { gap: 16px; flex-wrap: wrap; justify-content: center; }
   .trust-divider { display: none; }
+  .trust-item { font-size: .78rem; }
+
   .hero-search-box { padding: 6px; }
   .search-tabs { overflow-x: auto; flex-wrap: nowrap; }
   .search-tab { white-space: nowrap; font-size: .75rem; padding: 8px 12px; }
+
+  .section-title { font-size: clamp(1.25rem, 4vw, 1.75rem); }
+  .section-eyebrow { font-size: .65rem; letter-spacing: .08em; }
+  .section-sub { font-size: .9rem; }
+
+  .btn { padding: 12px 22px; font-size: .88rem; }
+  .btn-sm { padding: 9px 18px; font-size: .8rem; }
+  .btn-lg { padding: 14px 28px; font-size: .95rem; }
+
+  .tour-card-title { font-size: .95rem; }
+  .tour-card-meta { font-size: .8rem; gap: 6px; flex-wrap: wrap; }
+  .tour-card-price-val { font-size: 1.2rem; }
+  .tour-feature-tag { font-size: .72rem; padding: 3px 8px; }
+
+  .tours-filters { flex-wrap: wrap; gap: 6px; }
+  .tour-filter-btn { flex: 1 1 auto; min-width: 70px; font-size: .75rem; padding: 8px 10px; text-align: center; }
+}
+
+/* ── 360px — very small phone ── */
+@media (max-width: 360px) {
+  .container { padding: 0 12px; }
+  .nav-logo-icon { width: 36px; height: 36px; font-size: 1rem; }
+  .nav-logo-text strong { font-size: .82rem; }
+  .nav-logo-text span { display: none; }
+  .section-title { font-size: clamp(1.1rem, 4vw, 1.5rem); }
+  .tour-filter-btn { font-size: .7rem; padding: 7px 8px; min-width: 60px; }
+  .footer-col h4 { font-size: .68rem; }
+  .footer-col ul li a { font-size: .78rem; }
+  .footer-bottom-left { font-size: .72rem; }
 }
 
 /* ======================================================================
@@ -3210,7 +3283,7 @@ h1, h2, h3, h4, h5 {
   font-size: 1rem;
   background: transparent;
   color: var(--clr-gray-800);
-  family: var(--font-body);
+  font-family: var(--font-body);
 }
 
 .tours-search-input::placeholder {
@@ -3363,10 +3436,6 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 12px;
   }
 
-  .tours-hero > div:nth-child(2)::first-letter {
-    font-size: clamp(.85rem, 1.6vw, .95rem);
-  }
-
   .tours-search-input {
     padding: 10px 12px;
     font-size: 16px;
@@ -3387,11 +3456,11 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 16px;
   }
 
+  /* Buttons keep natural width so last row doesn't stretch awkwardly */
   .tour-filter-btn {
-    flex: 1;
-    min-width: 60px;
-    padding: 6px 10px;
-    font-size: .7rem;
+    flex: 0 0 auto;
+    padding: 6px 12px;
+    font-size: .72rem;
     min-height: 36px;
   }
 
@@ -3401,5 +3470,22 @@ h1, h2, h3, h4, h5 {
 
   .tour-card-price-val {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Stack price & rating on very small phones */
+  .tour-card-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tour-card-rating {
+    align-items: flex-start;
+  }
+  /* Tighter filter buttons */
+  .tour-filter-btn {
+    padding: 5px 9px;
+    font-size: .68rem;
+    min-height: 32px;
   }
 }
