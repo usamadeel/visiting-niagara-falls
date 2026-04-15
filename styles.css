@@ -3436,10 +3436,6 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 12px;
   }
 
-  .tours-hero > div:nth-child(2)::first-letter {
-    font-size: clamp(.85rem, 1.6vw, .95rem);
-  }
-
   .tours-search-input {
     padding: 10px 12px;
     font-size: 16px;
@@ -3460,11 +3456,11 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 16px;
   }
 
+  /* Buttons keep natural width so last row doesn't stretch awkwardly */
   .tour-filter-btn {
-    flex: 1;
-    min-width: 60px;
-    padding: 6px 10px;
-    font-size: .7rem;
+    flex: 0 0 auto;
+    padding: 6px 12px;
+    font-size: .72rem;
     min-height: 36px;
   }
 
@@ -3474,5 +3470,22 @@ h1, h2, h3, h4, h5 {
 
   .tour-card-price-val {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Stack price & rating on very small phones */
+  .tour-card-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tour-card-rating {
+    align-items: flex-start;
+  }
+  /* Tighter filter buttons */
+  .tour-filter-btn {
+    padding: 5px 9px;
+    font-size: .68rem;
+    min-height: 32px;
   }
 }
