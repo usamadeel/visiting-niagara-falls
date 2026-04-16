@@ -1465,7 +1465,7 @@ h1, h2, h3, h4, h5 {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  height: 324px;
+  height: 648px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1492,10 +1492,10 @@ h1, h2, h3, h4, h5 {
 .hp-blog-featured-body {
   position: relative;
   z-index: 2;
-  padding: 20px 24px 22px;
+  padding: 32px 30px 30px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 .hp-blog-featured-badge {
   display: inline-flex;
@@ -1575,7 +1575,7 @@ h1, h2, h3, h4, h5 {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 324px;
+  height: 648px;
 }
 .hp-blog-scroll-head {
   padding: 18px 20px 14px;
@@ -1685,8 +1685,8 @@ h1, h2, h3, h4, h5 {
 /* Responsive */
 @media (max-width: 900px) {
   .hp-blog-layout { grid-template-columns: 1fr; }
-  .hp-blog-featured { height: 280px; }
-  .hp-blog-scroll-wrap { height: 280px; }
+  .hp-blog-featured { height: 420px; }
+  .hp-blog-scroll-wrap { height: 420px; }
 }
 @media (max-width: 480px) {
   .hp-blog-featured-body { padding: 24px 20px 20px; gap: 10px; }
