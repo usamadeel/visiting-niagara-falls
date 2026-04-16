@@ -406,8 +406,8 @@ h1, h2, h3, h4, h5 {
 ====================================================================== */
 #hero {
   position: relative;
-  margin-top: clamp(72px, 11vw, 108px); /* push below fixed navbar */
-  min-height: calc(100svh - clamp(72px, 11vw, 108px));
+  margin-top: clamp(70px, 15vw, 120px);
+  min-height: calc(100svh - clamp(70px, 15vw, 120px));
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -2205,7 +2205,7 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ════════════════════════ PAGE HERO — CENTERED ════════════════════════ */
-.page-hero{position:relative;min-height:540px;display:flex;align-items:center;justify-content:center;padding-top:110px;padding-bottom:60px;overflow:hidden;background:var(--clr-blue-dark)}
+.page-hero{position:relative;min-height:540px;display:flex;align-items:center;justify-content:center;margin-top:clamp(70px,15vw,120px);padding-top:clamp(36px,6vw,56px);padding-bottom:60px;overflow:hidden;background:var(--clr-blue-dark)}
 .page-hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,35,66,.5) 0%,rgba(10,35,66,.78) 100%),url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&q=85&auto=format&fit=crop') center/cover no-repeat;animation:heroZoom 20s ease-in-out infinite alternate;will-change:transform}
 @keyframes heroZoom{from{transform:scale(1.03)}to{transform:scale(1.08)}}
 .page-hero-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 110%,rgba(13,71,161,.5) 0%,transparent 65%)}
@@ -2391,7 +2391,7 @@ h1, h2, h3, h4, h5 {
   .attr-sidebar .sidebar-card{grid-column:1/-1}
   .footer-main{grid-template-columns:1fr 1fr 1fr;gap:32px}
   .footer-main .footer-brand{grid-column:1/-1}
-  .page-hero{min-height:480px;padding-top:100px;padding-bottom:50px}
+  .page-hero{min-height:480px;padding-top:46px;padding-bottom:50px}
   .page-hero h1{font-size:clamp(1.8rem,4vw,3.2rem)}
   .page-hero-stats{gap:12px}
 }
@@ -2434,7 +2434,7 @@ h1, h2, h3, h4, h5 {
   .footer-main{grid-template-columns:1fr 1fr;gap:20px}
   .footer-col ul{gap:8px}
   .footer-col h4{margin-bottom:16px;font-size:.75rem}
-  .page-hero{min-height:420px;padding-top:90px;padding-bottom:40px}
+  .page-hero{min-height:420px;padding-top:40px;padding-bottom:40px}
   .page-hero h1{font-size:clamp(1.4rem,3vw,2.2rem)}
   .page-hero-desc{font-size:clamp(.9rem,1.5vw,1rem)}
   .page-hero-stat{padding:10px 16px}
@@ -2459,7 +2459,7 @@ h1, h2, h3, h4, h5 {
 
 @media(max-width:479px){
   .container{padding:0 16px}
-  .page-hero{min-height:380px;padding-top:80px;padding-bottom:30px}
+  .page-hero{min-height:380px;padding-top:30px;padding-bottom:30px}
   .page-hero h1{font-size:clamp(1.2rem,2.5vw,1.8rem);line-height:1.15}
   .page-hero h1 br{display:none}
   .page-hero-desc{font-size:.85rem;margin-bottom:20px}
@@ -2540,7 +2540,7 @@ h1, h2, h3, h4, h5 {
 
 @media(max-width:359px){
   .container{padding:0 12px}
-  .page-hero{padding-top:70px;padding-bottom:25px}
+  .page-hero{padding-top:24px;padding-bottom:25px}
   .page-hero h1{font-size:1.1rem;line-height:1.2}
   .page-hero-stats{flex-wrap:wrap}
   .page-hero-stat{padding:6px 10px}
@@ -2566,7 +2566,7 @@ h1, h2, h3, h4, h5 {
 }
 
 @media(max-width:767px) and (orientation: landscape){
-  .page-hero{min-height:300px;padding-top:60px;padding-bottom:20px}
+  .page-hero{min-height:300px;padding-top:20px;padding-bottom:20px}
   .page-hero h1{font-size:1.4rem}
   .page-hero-stats{display:flex;gap:8px}
 }
