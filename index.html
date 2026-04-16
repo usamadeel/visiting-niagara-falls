@@ -1282,57 +1282,149 @@
       <a href="/blog.html" class="btn btn-outline" aria-label="View all blog posts">View All Posts →</a>
     </div>
 
-    <div class="hp-blog-cards" data-reveal>
+    <div class="hp-blog-layout" data-reveal>
 
-      <!-- Card 1 — Featured -->
-      <a href="/blog.html" class="hp-blog-card hp-blog-card--featured" aria-label="The Ultimate Niagara Falls Visitor Guide 2025">
-        <div class="hp-blog-card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80&auto=format&fit=crop" alt="Niagara Falls aerial view at sunset" loading="lazy" />
-          <span class="hp-blog-tag">Travel Guide</span>
-        </div>
-        <div class="hp-blog-card-body">
-          <h3 class="hp-blog-title">The Ultimate Niagara Falls Visitor Guide 2025: Everything You Need to Know</h3>
-          <p class="hp-blog-excerpt">Your complete A-to-Z guide — best viewpoints, which side to stay on, money-saving tips, and hidden gems most visitors miss.</p>
-          <div class="hp-blog-foot">
-            <span class="hp-blog-meta">👤 Marcus Thompson &nbsp;·&nbsp; Jan 15, 2025</span>
-            <span class="hp-blog-read">12 min →</span>
+      <!-- ── Left: Big Featured Card ── -->
+      <a href="/blog.html" class="hp-blog-featured" aria-label="The Ultimate Niagara Falls Visitor Guide 2025">
+        <div class="hp-blog-featured-img" role="img" aria-label="Aerial view of Niagara Falls at sunset"></div>
+        <div class="hp-blog-featured-overlay" aria-hidden="true"></div>
+        <div class="hp-blog-featured-body">
+          <span class="hp-blog-featured-badge">✦ Featured Article</span>
+          <span class="hp-blog-featured-cat">Travel Guide</span>
+          <h3 class="hp-blog-featured-title">The Ultimate Niagara Falls Visitor Guide 2025: Everything You Need to Know</h3>
+          <p class="hp-blog-featured-desc">Your complete A-to-Z guide — best viewpoints, which side to stay on, money-saving tips, and the hidden gems most visitors miss.</p>
+          <div class="hp-blog-featured-meta">
+            <span>👤 Marcus Thompson</span>
+            <span>📅 Jan 15, 2025</span>
+            <span>⏱ 12 min read</span>
           </div>
+          <span class="hp-blog-featured-cta">Read Article →</span>
         </div>
       </a>
 
-      <!-- Card 2 -->
-      <a href="/blog.html" class="hp-blog-card" aria-label="Best Time to Visit Niagara Falls">
-        <div class="hp-blog-card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1535262412227-85541e910204?w=700&q=80&auto=format&fit=crop" alt="Niagara Falls in autumn colors" loading="lazy" />
-          <span class="hp-blog-tag">Seasonal Tips</span>
+      <!-- ── Right: Auto-Scrolling Panel ── -->
+      <div class="hp-blog-scroll-wrap">
+        <div class="hp-blog-scroll-head">
+          <span class="hp-blog-scroll-head-title">📰 Latest Posts</span>
+          <a href="/blog.html">View All →</a>
         </div>
-        <div class="hp-blog-card-body">
-          <h3 class="hp-blog-title">Best Time to Visit Niagara Falls: A Month-by-Month Guide</h3>
-          <p class="hp-blog-excerpt">Peak season crowds, off-season savings, and the magical winter ice formations — find the perfect time for your trip.</p>
-          <div class="hp-blog-foot">
-            <span class="hp-blog-meta">👤 Sarah Mitchell &nbsp;·&nbsp; Dec 10, 2024</span>
-            <span class="hp-blog-read">8 min →</span>
-          </div>
-        </div>
-      </a>
+        <div class="hp-blog-scroll-viewport">
+          <div class="hp-blog-scroll-track">
 
-      <!-- Card 3 -->
-      <a href="/blog.html" class="hp-blog-card" aria-label="Niagara Falls USA vs Canada">
-        <div class="hp-blog-card-img-wrap">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&auto=format&fit=crop" alt="Comparing USA and Canada sides of Niagara Falls" loading="lazy" />
-          <span class="hp-blog-tag">USA vs Canada</span>
-        </div>
-        <div class="hp-blog-card-body">
-          <h3 class="hp-blog-title">Niagara Falls USA vs. Canada: Which Side Gives You the Better View?</h3>
-          <p class="hp-blog-excerpt">Both sides are spectacular — but they offer completely different experiences. Here's how to decide which to prioritise.</p>
-          <div class="hp-blog-foot">
-            <span class="hp-blog-meta">👤 James Chen &nbsp;·&nbsp; Nov 28, 2024</span>
-            <span class="hp-blog-read">10 min →</span>
-          </div>
-        </div>
-      </a>
+            <a href="/blog.html" class="hp-blog-row">
+              <img class="hp-blog-row-img" src="https://images.unsplash.com/photo-1535262412227-85541e910204?w=200&q=75&auto=format&fit=crop" alt="Niagara Falls autumn" loading="lazy" />
+              <div class="hp-blog-row-body">
+                <span class="hp-blog-row-cat">Seasonal Tips</span>
+                <div class="hp-blog-row-title">Best Time to Visit Niagara Falls: A Month-by-Month Guide</div>
+                <div class="hp-blog-row-meta">Dec 10, 2024 · 8 min read</div>
+              </div>
+            </a>
 
-    </div>
+            <a href="/blog.html" class="hp-blog-row">
+              <img class="hp-blog-row-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&q=75&auto=format&fit=crop" alt="USA vs Canada Niagara" loading="lazy" />
+              <div class="hp-blog-row-body">
+                <span class="hp-blog-row-cat">USA vs Canada</span>
+                <div class="hp-blog-row-title">Niagara Falls USA vs. Canada: Which Side is Better?</div>
+                <div class="hp-blog-row-meta">Nov 28, 2024 · 10 min read</div>
+              </div>
+            </a>
+
+            <a href="/blog.html" class="hp-blog-row">
+              <img class="hp-blog-row-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&q=75&auto=format&fit=crop" alt="Niagara Falls with kids" loading="lazy" />
+              <div class="hp-blog-row-body">
+                <span class="hp-blog-row-cat">Family Travel</span>
+                <div class="hp-blog-row-title">Top 10 Things to Do at Niagara Falls with Kids</div>
+                <div class="hp-blog-row-meta">Nov 14, 2024 · 7 min read</div>
+              </div>
+            </a>
+
+            <a href="/blog.html" class="hp-blog-row">
+              <img class="hp-blog-row-img" src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=200&q=75&auto=format&fit=crop" alt="Niagara Falls in winter" loading="lazy" />
+              <div class="hp-blog-row-body">
+                <span class="hp-blog-row-cat">Winter Guide</span>
+                <div class="hp-blog-row-title">Niagara Falls in Winter: A Magical Hidden Gem</div>
+                <div class="hp-blog-row-meta">Oct 30, 2024 · 6 min read</div>
+              </div>
+            </a>
+
+            <a href="/blog.html" class="hp-blog-row">
+              <img class="hp-blog-row-img" src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&q=75&auto=format&fit=crop" alt="Maid of the Mist" loading="lazy" />
+              <div class="hp-blog-row-body">
+                <span class="hp-blog-row-cat">Attractions</span>
+                <div class="hp-blog-row-title">Maid of the Mist: Everything You Need to Know Before You Go</div>
+                <div class="hp-blog-row-meta">Mar 5, 2025 · 7 min read</div>
+              </div>
+            </a>
+
+            <a href="/blog.html" class="hp-blog-row">
+              <img class="hp-blog-row-img" src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=200&q=75&auto=format&fit=crop" alt="Budget travel tips" loading="lazy" />
+              <div class="hp-blog-row-body">
+                <span class="hp-blog-row-cat">Travel Tips</span>
+                <div class="hp-blog-row-title">Money-Saving Tips: Visit Niagara Falls on a Budget</div>
+                <div class="hp-blog-row-meta">Feb 20, 2025 · 6 min read</div>
+              </div>
+            </a>
+
+            <!-- Duplicate set for seamless infinite loop -->
+            <a href="/blog.html" class="hp-blog-row" aria-hidden="true">
+              <img class="hp-blog-row-img" src="https://images.unsplash.com/photo-1535262412227-85541e910204?w=200&q=75&auto=format&fit=crop" alt="" loading="lazy" />
+              <div class="hp-blog-row-body">
+                <span class="hp-blog-row-cat">Seasonal Tips</span>
+                <div class="hp-blog-row-title">Best Time to Visit Niagara Falls: A Month-by-Month Guide</div>
+                <div class="hp-blog-row-meta">Dec 10, 2024 · 8 min read</div>
+              </div>
+            </a>
+
+            <a href="/blog.html" class="hp-blog-row" aria-hidden="true">
+              <img class="hp-blog-row-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&q=75&auto=format&fit=crop" alt="" loading="lazy" />
+              <div class="hp-blog-row-body">
+                <span class="hp-blog-row-cat">USA vs Canada</span>
+                <div class="hp-blog-row-title">Niagara Falls USA vs. Canada: Which Side is Better?</div>
+                <div class="hp-blog-row-meta">Nov 28, 2024 · 10 min read</div>
+              </div>
+            </a>
+
+            <a href="/blog.html" class="hp-blog-row" aria-hidden="true">
+              <img class="hp-blog-row-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&q=75&auto=format&fit=crop" alt="" loading="lazy" />
+              <div class="hp-blog-row-body">
+                <span class="hp-blog-row-cat">Family Travel</span>
+                <div class="hp-blog-row-title">Top 10 Things to Do at Niagara Falls with Kids</div>
+                <div class="hp-blog-row-meta">Nov 14, 2024 · 7 min read</div>
+              </div>
+            </a>
+
+            <a href="/blog.html" class="hp-blog-row" aria-hidden="true">
+              <img class="hp-blog-row-img" src="https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=200&q=75&auto=format&fit=crop" alt="" loading="lazy" />
+              <div class="hp-blog-row-body">
+                <span class="hp-blog-row-cat">Winter Guide</span>
+                <div class="hp-blog-row-title">Niagara Falls in Winter: A Magical Hidden Gem</div>
+                <div class="hp-blog-row-meta">Oct 30, 2024 · 6 min read</div>
+              </div>
+            </a>
+
+            <a href="/blog.html" class="hp-blog-row" aria-hidden="true">
+              <img class="hp-blog-row-img" src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&q=75&auto=format&fit=crop" alt="" loading="lazy" />
+              <div class="hp-blog-row-body">
+                <span class="hp-blog-row-cat">Attractions</span>
+                <div class="hp-blog-row-title">Maid of the Mist: Everything You Need to Know Before You Go</div>
+                <div class="hp-blog-row-meta">Mar 5, 2025 · 7 min read</div>
+              </div>
+            </a>
+
+            <a href="/blog.html" class="hp-blog-row" aria-hidden="true">
+              <img class="hp-blog-row-img" src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=200&q=75&auto=format&fit=crop" alt="" loading="lazy" />
+              <div class="hp-blog-row-body">
+                <span class="hp-blog-row-cat">Travel Tips</span>
+                <div class="hp-blog-row-title">Money-Saving Tips: Visit Niagara Falls on a Budget</div>
+                <div class="hp-blog-row-meta">Feb 20, 2025 · 6 min read</div>
+              </div>
+            </a>
+
+          </div><!-- /.hp-blog-scroll-track -->
+        </div><!-- /.hp-blog-scroll-viewport -->
+      </div><!-- /.hp-blog-scroll-wrap -->
+
+    </div><!-- /.hp-blog-layout -->
   </div>
 </section>
 
