@@ -162,8 +162,22 @@
 ====================================================================== -->
 <section class="blog-hero" aria-labelledby="blog-title">
   <div class="blog-hero-content">
+    <nav class="page-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">›</span>
+      <span class="current">Blog</span>
+    </nav>
+    <p class="page-hero-eyebrow">Niagara Falls Travel Blog</p>
     <h1 id="blog-title">Travel Tips & Stories</h1>
     <p class="blog-hero-subtitle">Expert guides, visitor stories, and insider tips for experiencing Niagara Falls</p>
+    <div class="blog-hero-search">
+      <input
+        type="text"
+        id="blogSearch"
+        placeholder="Search blog posts..."
+        aria-label="Search blog posts"
+      />
+    </div>
   </div>
 </section>
 
@@ -174,19 +188,6 @@
   <div class="blog-wrapper">
     <!-- Blog Grid Section -->
     <div>
-      <!-- Search & Filter -->
-      <div class="blog-controls">
-        <div class="blog-search-box">
-          <input 
-            type="text" 
-            id="blogSearch" 
-            placeholder="Search blog posts..." 
-            aria-label="Search blog posts"
-            style="font-size: 16px;"
-          />
-        </div>
-      </div>
-
       <!-- Category Filters -->
       <div class="blog-filters" role="group" aria-label="Blog categories" style="margin-bottom: 40px;">
         <button class="blog-filter-btn active" data-category="all">All Posts</button>

@@ -2615,7 +2615,39 @@ h1, h2, h3, h4, h5 {
   font-size: clamp(.9rem, 2vw, 1.1rem);
   color: rgba(255,255,255,.9);
   max-width: 500px;
+  margin: 0 auto 28px;
+}
+
+.blog-hero-search {
+  max-width: 520px;
   margin: 0 auto;
+  position: relative;
+}
+
+.blog-hero-search input {
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  background: rgba(255,255,255,.15);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.3);
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+  min-height: 48px;
+  box-sizing: border-box;
+}
+
+.blog-hero-search input::placeholder {
+  color: rgba(255,255,255,.6);
+}
+
+.blog-hero-search input:focus {
+  outline: none;
+  background: rgba(255,255,255,.22);
+  border-color: rgba(255,255,255,.6);
 }
 
 /* Blog Container */
