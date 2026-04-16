@@ -1032,6 +1032,16 @@ h1, h2, h3, h4, h5 {
   z-index: 1;
 }
 
+.attraction-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--clr-gray-100);
+}
+
 .attraction-card-title {
   font-family: var(--font-heading);
   font-size: 1rem;
