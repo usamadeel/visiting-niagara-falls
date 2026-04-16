@@ -1465,7 +1465,7 @@ h1, h2, h3, h4, h5 {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  min-height: 540px;
+  min-height: 324px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1492,10 +1492,10 @@ h1, h2, h3, h4, h5 {
 .hp-blog-featured-body {
   position: relative;
   z-index: 2;
-  padding: 36px 32px 32px;
+  padding: 20px 24px 22px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 .hp-blog-featured-badge {
   display: inline-flex;
@@ -1684,8 +1684,8 @@ h1, h2, h3, h4, h5 {
 /* Responsive */
 @media (max-width: 900px) {
   .hp-blog-layout { grid-template-columns: 1fr; }
-  .hp-blog-featured { min-height: 400px; }
-  .hp-blog-scroll-wrap { min-height: 360px; }
+  .hp-blog-featured { min-height: 280px; }
+  .hp-blog-scroll-wrap { min-height: 280px; }
 }
 @media (max-width: 480px) {
   .hp-blog-featured-body { padding: 24px 20px 20px; gap: 10px; }
