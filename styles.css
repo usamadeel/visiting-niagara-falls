@@ -2764,6 +2764,27 @@ h1, h2, h3, h4, h5 {
   flex: 1;
 }
 
+.blog-card-guide-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--clr-gold, #E5A000);
+  margin-bottom: 8px;
+}
+.blog-card-guide-badge::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--clr-gold, #E5A000);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
 .blog-card-date {
   font-size: clamp(.7rem, 1vw, .8rem);
   color: var(--clr-gray-400);
