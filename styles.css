@@ -972,14 +972,13 @@ h1, h2, h3, h4, h5 {
   transition: var(--transition);
   cursor: pointer;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 24px;
+  flex-direction: column;
+  align-items: stretch;
 }
 .attraction-card-body {
   flex: 1;
   min-width: 0;
+  padding: 20px;
 }
 .attraction-card:hover {
   transform: translateY(-4px);
@@ -990,7 +989,7 @@ h1, h2, h3, h4, h5 {
 .attraction-card-img {
   position: relative;
   height: 200px;
-  overflow: visible;
+  overflow: hidden;
 }
 .attraction-card-img img {
   width: 100%;
@@ -1019,15 +1018,18 @@ h1, h2, h3, h4, h5 {
 .attraction-card:hover .attraction-card-img .img-clip img { transform: scale(1.08); }
 
 .attraction-card-icon {
-  flex-shrink: 0;
-  width: 52px; height: 52px;
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  width: 44px; height: 44px;
   background: linear-gradient(135deg, var(--clr-blue), var(--clr-blue-light));
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   box-shadow: var(--shadow-sm);
+  z-index: 1;
 }
 
 .attraction-card-title {
@@ -2325,8 +2327,8 @@ h1, h2, h3, h4, h5 {
 
   .tours-grid { grid-template-columns: 1fr; }
   .attractions-grid { grid-template-columns: 1fr; }
-  .attraction-card { flex-direction: row; align-items: flex-start; gap: 16px; }
-  .attraction-card-icon { flex-shrink: 0; width: 48px; height: 48px; }
+  .attraction-card { flex-direction: column; }
+  .attraction-card-icon { width: 40px; height: 40px; font-size: 1.1rem; }
   .guides-grid { grid-template-columns: repeat(2, 1fr); }
   .why-us-grid { grid-template-columns: 1fr 1fr; }
   .reviews-grid { grid-template-columns: 1fr; }
