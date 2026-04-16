@@ -465,8 +465,8 @@ h1, h2, h3, h4, h5 {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding-top: 48px;
-  padding-bottom: 60px;
+  padding-top: clamp(60px, 10vw, 100px);
+  padding-bottom: clamp(60px, 10vw, 100px);
   text-align: center;
   display: flex;
   flex-direction: column;
