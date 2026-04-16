@@ -1498,6 +1498,10 @@ h1, h2, h3, h4, h5 {
   gap: 12px;
 }
 .hp-blog-featured-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 3;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -1509,7 +1513,6 @@ h1, h2, h3, h4, h5 {
   letter-spacing: .12em;
   padding: 5px 13px;
   border-radius: 100px;
-  width: fit-content;
 }
 .hp-blog-featured-cat {
   font-size: .7rem;
