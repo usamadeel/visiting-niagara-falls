@@ -421,15 +421,12 @@
 
       </div>
 
-      <!-- Pagination -->
-      <div class="blog-pagination" role="navigation" aria-label="Blog pagination">
-        <button class="pagination-btn" aria-label="Previous page" title="Previous">← Prev</button>
-        <button class="pagination-num active">1</button>
-        <button class="pagination-num">2</button>
-        <button class="pagination-num">3</button>
-        <span style="color: var(--clr-gray-500);">...</span>
-        <button class="pagination-num">8</button>
-        <button class="pagination-btn" aria-label="Next page" title="Next">Next →</button>
+      <!-- Infinite scroll sentinel & loader -->
+      <div id="blog-sentinel" aria-hidden="true"></div>
+      <div id="blog-load-indicator" class="blog-load-indicator" aria-live="polite">
+        <div class="blog-load-spinner">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </div>
 
