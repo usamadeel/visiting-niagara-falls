@@ -70,10 +70,12 @@ ServerSignature Off
     RewriteRule ^niagara-falls-canada/?$         destinations/canada.html [L]
 
     # Static pages
-    RewriteRule ^about/?$        about.html   [L]
-    RewriteRule ^contact/?$      contact.html [L]
-    RewriteRule ^faq/?$          faq.html     [L]
-    RewriteRule ^reviews/?$      reviews.html [L]
+    RewriteRule ^tours/?$        tours.html        [L]
+    RewriteRule ^attractions/?$  attractions.html  [L]
+    RewriteRule ^about/?$        about.html        [L]
+    RewriteRule ^contact/?$      contact.html      [L]
+    RewriteRule ^faq/?$          faq.html          [L]
+    RewriteRule ^reviews/?$      reviews.html      [L]
 
 
     # ──────────────────────────────────────────────────────────────────────────
