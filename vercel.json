@@ -2,9 +2,13 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/tours/",       "destination": "/tours",       "permanent": true },
-    { "source": "/attractions/", "destination": "/attractions", "permanent": true },
-    { "source": "/blog/",        "destination": "/blog",        "permanent": true }
+    { "source": "/tours/",                              "destination": "/tours",                                          "permanent": true },
+    { "source": "/attractions/",                        "destination": "/attractions",                                    "permanent": true },
+    { "source": "/blog/",                               "destination": "/blog",                                           "permanent": true },
+    { "source": "/maid-of-the-mist",                    "destination": "/attractions/maid-of-the-mist",                   "permanent": true },
+    { "source": "/maid-of-the-mist/",                   "destination": "/attractions/maid-of-the-mist",                   "permanent": true },
+    { "source": "/ten-thousand-buddhas-sarira-stupa",   "destination": "/attractions/ten-thousand-buddhas-sarira-stupa",  "permanent": true },
+    { "source": "/ten-thousand-buddhas-sarira-stupa/",  "destination": "/attractions/ten-thousand-buddhas-sarira-stupa",  "permanent": true }
   ],
   "headers": [
     {
